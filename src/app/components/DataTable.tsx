@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable */
 
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
@@ -8,7 +9,6 @@ import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableFooter from "@mui/material/TableFooter";
-import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import IconButton from "@mui/material/IconButton";
@@ -17,7 +17,6 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import LastPageIcon from "@mui/icons-material/LastPage";
 import Avatar from "@mui/material/Avatar";
-import Chip from "@mui/material/Chip";
 import TableHead from "@mui/material/TableHead";
 import { AiOutlineDownload } from "react-icons/ai";
 
@@ -119,44 +118,6 @@ export default function DataTable({ columns, rows }: DataTableProps) {
                         ))}
                     </TableRow>
                 </TableHead>
-                {/* <TableBody>
-                    {(rowsPerPage > 0
-                        ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                        : rows
-                    ).map((row, rowIndex) => (
-                        <TableRow key={rowIndex}>
-                            {columns.map((column) => (
-                                <TableCell key={column.id} align={column.align}>
-                                    {column.id === "user" ? (
-                                        <Box display="flex" alignItems="center">
-                                            <Avatar src={row.avatar} sx={{ mr: 2 }} />
-                                            {row.user}
-                                        </Box>
-                                    ) : column.id === "status" ? (
-                                        <div
-                                            className={`w-24 m-auto px-3 py-1 text-sm font-medium rounded ${row.status === "active"
-                                                ? "bg-green-100 text-green-600 border border-green-500"
-                                                : row.status === "pending"
-                                                    ? "bg-yellow-100 text-yellow-600 border border-yellow-500"
-                                                    : "bg-red-100 text-red-600 border border-red-500"
-                                                }`}
-                                        >
-                                            {row[column.id]}
-                                        </div>
-                                    ) : (
-                                        row[column.id]
-                                    )}
-                                </TableCell>
-                            ))}
-                        </TableRow>
-                    ))}
-                    {emptyRows > 0 && (
-                        <TableRow style={{ height: 53 * emptyRows }}>
-                            <TableCell colSpan={columns.length} />
-                        </TableRow>
-                    )}
-                </TableBody> */}
-
                 <TableBody>
                     {(rowsPerPage > 0
                         ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)

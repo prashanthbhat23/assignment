@@ -37,7 +37,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
 
-
+        <title>Assignment - Datatable</title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

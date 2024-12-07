@@ -1,17 +1,19 @@
 import DataTable from "@/app/components/DataTable"
-import { users } from "@/app/data/users";
+import { invoiceData } from "@/app/data/invoice";
 import { GoDotFill } from "react-icons/go";
-import InfoCard from "../components/InfoCard";
 import { FaCheckCircle, FaClock, FaFileInvoice, FaShippingFast } from "react-icons/fa";
+import InfoCard from "@/app/components/InfoCard";
+
 const columns = [
-  { id: "user", label: "User", align: "left" as 'left' },
-  { id: "projectName", label: "Project Name", align: "center" as 'center' },
-  { id: "users", label: "Users", align: "center" as 'center' },
-  { id: "status", label: "Status", align: "center" as 'center' },
+  { id: "id", label: "Id" ,align: "center" as 'center' },
+  { id: "billFrom", label: "Bill From" ,align: "center" as 'center' },
+  { id: "billTo", label: "Bill To" ,align: "center" as 'center' },
+  { id: "totalCost", label: "Total Cost" ,align: "center" as 'center' },
+  { id: "status", label: "Status" ,align: "center" as 'center' },
+  { id: "action", label: "Action" ,align: "center" as 'center' }
 ];
 
-
-const rows = users;
+const rows = invoiceData;
 
 export default function Invoice() {
   return (
