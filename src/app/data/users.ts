@@ -1,39 +1,46 @@
-export const users  = [
+export const usersData = {
+  " users": [
     {
       "user": "Olivia Rhye",
       "projectName": "Xtreme admin",
-      "users": "F R",
-      "status": "active"
+      "users": "user1 user4",
+      "status": "active",
+      "icon": "user1"
     },
     {
       "user": "Barbara Steele",
       "projectName": "Adminpro admin",
-      "users": "W Q",
-      "status": "cancel"
+      "users": "user1",
+      "status": "cancel",
+      "icon": "user2"
     },
     {
       "user": "Isabel Vasquez",
       "projectName": "Modernize admin",
-      "users": "K",
-      "status": "pending"
+      "users": "user5",
+      "status": "pending",
+      "icon": "user3"
     },
     {
       "user": "Leonard Gordon",
       "projectName": "Monster admin",
-      "users": "B G",
-      "status": "active"
+      "users": "user3 user1",
+      "status": "active",
+      "icon": "user4"
     },
     {
       "user": "Evelyn Pope",
       "projectName": "Materialpro admin",
-      "users": "S",
-      "status": "pending"
+      "users": "user3 user5",
+      "status": "pending",
+      "icon": "user5"
     },
     {
       "user": "Tommy Garza",
       "projectName": "Elegant admin",
-      "users": "A",
-      "status": "cancel"
+      "users": "user1",
+      "status": "cancel",
+      "icon": "user3"
     }
   ]
-  
+}

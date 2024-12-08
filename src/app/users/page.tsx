@@ -1,5 +1,5 @@
 import DataTable from "@/app/components/DataTable"
-import { users } from "@/app/data/users";
+import { usersData } from "@/app/data/users";
 import { GoDotFill } from "react-icons/go";
 const columns = [
   { id: "user", label: "User", align: "left" as 'left' },
@@ -8,8 +8,19 @@ const columns = [
   { id: "status", label: "Status", align: "center" as 'center' },
 ];
 
+interface User {
+  user: string;
+  projectName: string;
+  users: string;
+  status: string;
+  icon: string;
+}
 
-const rows = users;
+interface UsersData {
+  users: User[]; 
+}
+
+const rows = usersData[" users"]; 
 
 export default function User() {
   return (
@@ -21,7 +32,7 @@ export default function User() {
           <p className="text-gray-500"><GoDotFill /></p>
           <p className="text-gray-500">Filter React Table</p>
         </div>
-        <DataTable columns={columns} rows={rows} />
+        <DataTable columns={columns} rows={rows} selectable={false} />
       </div>
     </div>
   );

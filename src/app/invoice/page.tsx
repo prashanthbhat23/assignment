@@ -13,7 +13,7 @@ const columns = [
   { id: "action", label: "Action" ,align: "center" as 'center' }
 ];
 
-const rows = invoiceData;
+const rows = invoiceData["invoices"]; 
 
 export default function Invoice() {
   return (
@@ -31,32 +31,32 @@ export default function Invoice() {
               title="Total Invoices"
               count="7"
               icon={<FaFileInvoice />}
-              bgColor="bg-blue-100"
+              bgColor="blue-100"
               textColor="blue-600"
             />
             <InfoCard
               title="Shipped Invoices"
               count="3"
               icon={<FaShippingFast />}
-              bgColor="bg-orange-100"
+              bgColor="orange-100"
               textColor="orange-600"
             />
             <InfoCard
               title="Delivered Invoices"
               count="3"
               icon={<FaCheckCircle />}
-              bgColor="bg-green-100"
+              bgColor="green-100"
               textColor="green-600"
             />
             <InfoCard
               title="Pending Invoices"
               count="1"
               icon={<FaClock />}
-              bgColor="bg-yellow-100"
+              bgColor="yellow-100"
               textColor="yellow-600"
             />
           </div>
-          <DataTable columns={columns} rows={rows} />
+          <DataTable columns={columns} rows={rows} selectable={true} />
         </div>
       </div>
     </div>
