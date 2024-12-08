@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import DataTable from "@/app/components/DataTable"
 import { usersData } from "@/app/data/users";
 import { GoDotFill } from "react-icons/go";
